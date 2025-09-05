@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("fonts/Montserrat-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url("fonts/Montserrat-Light.ttf") format("truetype");
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    font-family: Montserrat-Light, sans-serif;
+    background: #111;
+    color: #F8F9FA;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#mainContainer {
+    width: 100%;
+    height: 100%;
+}
+
+#mainContainer > div {
+    transition: background 0.6s ease-in-out;
+}
+
+#mainContainer > div:nth-child(even) {
+    width: 100%;
+    min-height: 50vh;
+    padding: 60px 40px;
+    background: #F8F9FA;
+    color: #333;
+}
+
+#mainContainer > div:nth-child(odd) {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #222, #111);
+    color: #F8F9FA;
+}
+
+/* ============================ Section 1 ============================ */
+#section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+#profileContainer {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease;
+}
+
+#profileContainer:hover {
+    transform: scale(1.05);
+}
+
+#profileContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#nameParagraphContainer {
+    max-width: 700px;
+}
+
+#nameParagraphContainer h1 {
+    font-family: Montserrat-Bold;
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+#nameParagraphContainer p {
+    font-size: 1em;
+    line-height: 1.7;
+    text-align: justify;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    margin-bottom: 30px;
+}
+
+#nameParagraphContainer p:hover {
+    opacity: 1;
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #3f37c9;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: Montserrat-Bold;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.cv-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+    background: rgb(55, 48, 184)
+}
+
+.cv-button:active {
+    transform: translateY(-1px);
+}
+
+/* ============================ Section 2 ============================ */
+#section2 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 40px;
+}
+
+#section2 > div:first-child {
+    text-align: center;
+}
+
+#section2 h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5em;
+    color: #333;
+    letter-spacing: 6px;
+    position: relative;
+}
+
+#section2 h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+#section2 > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+#section2 .imageContainer {
+    width: 280px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    background: #fff;
+}
+
+#section2 .imageContainer:hover {
+    transform: scale(1.08) rotate(-1deg);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+#section2 .imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+#section2 .imageContainer:hover img {
+    transform: scale(1.1);
+}
+
+/* ============================ Section 3 ============================ */
+#section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section3 > div:first-child {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#section3 h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5em;
+    color: #F8F9FA;
+    letter-spacing: 6px;
+    position: relative;
+}
+
+#section3 h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+#section3 > div:last-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+#section3 .imageContainer {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #222;
+    cursor: pointer;
+}
+
+#section3 .imageContainer:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+#section3 .imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================ Responsive ============================ */
+@media (max-width: 768px) {
+    #section1 {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    #profileContainer {
+        width: 300px;
+        height: 300px;
+    }
+
+    #nameParagraphContainer {
+        text-align: center;
+    }
+
+    #nameParagraphContainer h1 {
+        font-size: 2em;
+    }
+
+    #section2 h2,
+    #section3 h2 {
+        font-size: 2.2em;
+    }
+
+    #section2 .imageContainer {
+        width: 200px;
+        height: 200px;
+    }
+
+    #section3 .imageContainer {
+        height: 200px;
+    }
+
+    .cv-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
